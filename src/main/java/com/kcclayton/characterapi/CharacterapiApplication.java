@@ -7,7 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class CharacterapiApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(CharacterapiApplication.class, args);
+		
 	}
 
 }
