@@ -4,11 +4,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CharacterapiApplication {
+public class CharacterApiApplication {
 
 	public static void main(String[] args) {
 
-		SpringApplication.run(CharacterapiApplication.class, args);
+		SpringApplication.run(CharacterApiApplication.class, args);
 		
 	}
 
