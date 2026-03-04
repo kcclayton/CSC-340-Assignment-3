@@ -6,13 +6,13 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/ characters")
+@RequestMapping("/characters")
 public class CharacterController {
 
     @Autowired
     private CharacterService characterService;
 
-    // GET all characters
+    // GET - all characters
     // localhost:8080/characters
     @GetMapping
     public List<Character> getAllCharacters() {
@@ -21,7 +21,7 @@ public class CharacterController {
 
     }
 
-    // GET character by ID
+    // GET - character by ID
     // localhost:8080/characters/1
     @GetMapping("/{id}")
     public Optional<Character> getCharacterById(@PathVariable Long id) {
@@ -30,6 +30,33 @@ public class CharacterController {
 
     }
     
+    // GET - by year
+    // localhost:8080/characters/category/year
+    @GetMapping("/category/{year}")
+    public List<Character> getByYear(@PathVariable double year) {
+
+        return characterService.getByYear(year);
+
+    }
+
+    // GET - search by name substring
+    // localhost:8080/characters/search?name=moana
+    @GetMapping("/search")
+    public List<Character> searchByName(@RequestParam String name) {
+
+        return characterService.searchByName(name);
+
+    }
+
+    // PUT - update an existing character
+    // localhost:8080/characters
+    @PutMapping("/{id}")
+    public Character updateCharacter(@PathVariable Long id, @RequestBody Character character) {
+
+        return characterService.updateCharacter(id, character);
+
+    }
+
     // POST - add new character
     // localhost:8080/characters
     @PostMapping
@@ -39,31 +66,13 @@ public class CharacterController {
 
     }
 
-    // PUT - delete a character
+    // DELETE - delete a character
     // localhost:8080/characters/1
     @DeleteMapping("/{id}")
     public String deleteCharacter(@PathVariable Long id) {
 
         characterService.deleteCharacter(id);
         return "Character with ID " + id + " has been deleted.";
-
-    }
-
-    // GET by year
-    // localhost:8080/characters/category/year
-    @GetMapping("/category/{year}")
-    public List<Character> getByYear(@PathVariable double year) {
-
-        return characterService.getByYear(year);
-
-    }
-
-    // GET search by name substring
-    // localhost:8080/characters/search?name=moana
-    @GetMapping("/search")
-    public List<Character> searchByName(@RequestParam String name) {
-
-        return characterService.searchByName(name);
 
     }
 
