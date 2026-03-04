@@ -8,7 +8,7 @@ import java.util.List;
 public interface CharacterRepository extends JpaRepository<Character, Long> {
 
     // Query 1
-    List<Character> findByNameContaining(String name);
+    List<Character> findByNameContainingIgnoreCase(String name);
 
     // Query 2
     List<Character> findByYear(double year);

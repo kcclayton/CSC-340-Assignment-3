@@ -57,7 +57,7 @@ public class CharacterService {
     // Search by name substring
     public List<Character> searchByName(String name) {
 
-        return characterRepository.findByNameContaining(name);
+        return characterRepository.findByNameContainingIgnoreCase(name);
 
     }
 
