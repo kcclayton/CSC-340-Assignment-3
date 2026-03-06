@@ -163,7 +163,7 @@ Press `Ctrl+C` in your terminal, or click the **Stop** button in VS Code.
 
 ```
 src/main/java/com/kcclayton/characterapi/
-├── CharacterapiApplication.java     # Entry point of the application
+├── CharacterApiApplication.java     # Entry point of the application
 ├── CharacterController.java         # Handles HTTP requests
 ├── CharacterService.java            # Business logic layer
 ├── CharacterRepository.java         # Database access layer
