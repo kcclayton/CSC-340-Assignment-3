@@ -1,0 +1,76 @@
+a {
+
+    text-decoration: none;
+    color: black;
+
+}
+
+body {
+
+    background-color: hsl(350, 100%, 88%);
+    font-family: "Dosis", Arial, Helvetica, sans-serif;
+}
+
+h1 {
+
+    font-family: "Patrick Hand SC", Arial, Helvetica, sans-serif;
+
+}
+
+h4 {
+
+    font-family: "Dosis", Arial, Helvetica, sans-serif;
+
+}
+
+.navbar-custom {
+
+    background-color: hsl(350, 100%, 82%);
+
+}
+
+.btn-outline-custom {
+
+    background-color: pink;
+
+}
+
+.card-custom {
+
+    background-color: hsl(350, 100%, 85%);
+    margin: 20px;
+
+}
+
+.card-title {
+
+    font-family: "Patrick Hand SC", Arial, Helvetica, sans-serif;
+    font-size: x-large;
+    color: black;
+
+}
+
+.card-text {
+
+    font-family: "Dosis", Arial, Helvetica, sans-serif;
+    color: black;
+
+}
+
+small {
+
+    font-size: small;
+
+}
+
+#info-card {
+
+    float: right;
+
+}
+
+.body-text {
+
+    font-family: "Dosis", Arial, Helvetica, sans-serif;
+
+}
